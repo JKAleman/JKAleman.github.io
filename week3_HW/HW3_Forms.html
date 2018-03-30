@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<title> Payment Form </title>
+</head>
+
+<body>
+	<h1> Payment Form </h1>
+	<h2 style="color:red;"> All fields are REQUIRED </h2>
+	
+	<form action="http://www.example.com/subscribe/php" method="get">
+		<p>
+			<label> First Name
+				<input type="text" name="fname" maxlength="10" /> </label>
+			<br/>
+			
+			<label> Last Name
+				<input type="text" name="lname" maxlength="15" /> </label>
+			<br/> 
+			
+			<label> Street Address
+				<input type="text" name="address" /> </label>		
+			<br/>
+			
+			<label> City
+				<input type="text" name="city" /> </label>
+			<br/> 
+			
+			<label> State
+				<input type="text" name="state" /> </label>
+			<br/>
+			
+			<label> ZIP/Postal Code
+				<input type="text" name="zip" /> </label>		
+			<br/>
+			
+			Credit Card Type <br />
+			<input id="mastercard" type="radio" name="cardtype" value="MasterCard" checked="checked" /> 
+				<label for="mastercard"> MasterCard </label> <br />
+			<input id="visa" type="radio" name="cardtype" value="VISA" /> 
+				<label for="visa"> VISA </label> <br />
+			<input id="discover" type="radio" name="cardtype" value="Discover" /> 
+				<label for="discover"> Discover </label>
+			<br/> 
+			
+			<label>	Credit Card Number
+				<input type="text" name="cardnum" /> </label>
+			<br/> 
+			
+			Expiration Date
+			<select name="expMonth">
+				<option value="Jan">1- January</option>
+				<option value="Feb">2- February</option>
+				<option value="Mar">3- March</option>
+				<option value="Apr">4- April</option>
+				<option value="May">5- May</option>
+				<option value="Jun">6- June</option>
+				<option value="Jul">7- July</option>
+				<option value="Aug">8- August</option>
+				<option value="Sept">9- September</option>
+				<option value="Oct">10- October</option>
+				<option value="Nov">11- November</option>
+				<option value="Dec">12- December</option>
+			</select>	
+			
+			<select name="expYear">
+				<option value="2013">2013</option>
+				<option value="2014">2014</option>
+				<option value="2015">2015</option>
+				<option value="2016">2016</option>
+				<option value="2017">2017</option>
+				<option value="2018">2018</option>
+			</select>
+			
+			<br/> 
+			<label> Special Notes <br/>
+			<textarea name="comment" cols="30" rows="8"> Enter comment </textarea> </label>
+		</p>
+		
+		<input type="submit" name="subscribe" value="Submit Payment" />
+		
+	</form>
+</body>
+</html>
