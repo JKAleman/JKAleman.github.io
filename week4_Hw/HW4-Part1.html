@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title> Registration </title>
+		<link rel="stylesheet" type="text/css" href="Habitatform.css">
+	</head>
+
+	<body>
+	
+	<div id="topbanner">
+		<img src="images/habitat_logo.png" alt="Habitat Logo" />
+	</div> <!-- top logo banner -->
+	
+	<div id="sidebar">
+		<a class="linkbutton" href="http://www.habitat.org/about"> Learn more </a> <br /> 
+		<a class="linkbutton" href="http://www.habitat.org/volunteer"> Volunteer </a> <br /> 
+		<a class="linkbutton" href="http://www.habitat.org/about/advocacy"> Advocate </a> <br /> 
+		<a class="linkbutton" href="https://www.habitat.org/donate/"> Donate </a> <br />
+	</div> <!-- Sidebar quick links -->
+	
+	<div id="formpage">
+		<h3> Registration Form </h3>
+		
+		<p> Habitat for Humanity needs volunteers. Do you want to help? Complete the registration form and join
+		our worldwide fight against substandard housing. </p>
+		
+		<form action="http://www.example.com/subscripe.php" method="get">
+
+			<fieldset class="formbox"> 
+				<legend> Personal Information: </legend>
+				Title: <input type="text" name="title" maxlength="4"> <br />
+				First Name: <input required type="text" name="fname" maxlength="15"> <br />
+				Last Name: <input required type="text" name="lname" maxlength="25"> <br />
+				Date of Birth: <input required type="text" name="DoB" placeholder="dd/mm/yyyy" 
+					pattern="\d{1,2}/\d{1,2}/\d{4}"> <br />
+				Best Home Building Skill: <br />
+				<textarea name="skillset" cols="22" rows="2"> Carpentry </textarea>
+			</fieldset> <!-- Personal Information portion of form -->
+			<br />
+			
+			<fieldset class="formbox"> 
+				<legend> Experience: </legend>
+				Years of Home Building Experience: 0 <input type="range" name="experience" min="0" max="10" 
+					value="5"> 10+ <br />
+				<br />
+				Number of Habitat Homes Built: <input type="text" name="homesbuilt" maxlength="3"> <br />
+			<br />
+			
+			<button type="submit"> Submit Form </button> <button type="submit" target="_blank"> Submit Form to 
+				a New Window </button>
+			</fieldset> <!-- Expericence Section of form -->
+		</form>
+		
+		<br />
+		<br />
+		<br />
+		
+	</div>
+	
+	</body>
+</html>
