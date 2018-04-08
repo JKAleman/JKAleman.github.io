@@ -1,0 +1,64 @@
+body {
+	background-color: rgba(255,94,78,0.75);
+	opacity: 0.75;
+	font-family: "Trebuchet MS", Helvetica, sans-serif; 
+}
+h2, h3 {
+	color: rgb(105,18,60);
+	text-decoration: Overline Underline;
+	padding-top: 0px;
+	margin-top: 10px;
+	text-indent: 20px;
+}
+p, li {
+	color: rgb(105,18,60);
+}
+img {
+	border-radius: 20px;
+	border: 2px solid;
+	border-color: rgb(242,63,91);
+	padding:5px;
+	background-color: white;
+	margin-top:25px;
+}
+#title {
+	margin: auto;
+	font-size: 30px;
+	text-align: center;
+	background-color: rgb(255,197,159);
+	margin-top: 0px;
+	width: 700px;
+}
+#ingredients {
+	border: 2px solid rgb(242,63,91);
+	background-color: rgb(255,197,159);
+	padding-top: 0px;
+	padding-right: 10px;
+	padding-bottom: 5px;
+	line-height: 20px;
+	width: 50%;
+	display: block;
+	margin: auto;
+}
+#directions {
+	border: 2px solid rgb(242,63,91);
+	background-color: rgb(255,197,159);
+	padding-top: 0px;
+	padding-right: 10px;
+	padding-bottom: 5px;
+	line-height: 20px;
+	margin-top:25px;
+	width: 50%;
+	display:block;
+	margin-left: auto;
+	margin-right: auto;
+}
+#main, #imgquote {
+	
+	display: block;
+	max-width: 50%;
+	height: auto;
+	margin-top: 25px;
+	margin-left: auto;
+	margin-right: auto;
+}
