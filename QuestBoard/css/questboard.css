@@ -1,0 +1,98 @@
+body {
+	margin: 0 auto;
+	padding: 0;
+	background-color:#fdfdfb;
+}
+/* top of page navigation and logo */
+#header {
+	background-color: #fe5f55;
+	color:#ffffff;
+	height: 60px;
+	margin-top:-22px;
+}
+#header img {
+	float:left;
+	display: block;
+	width:50px;
+	height:50px;
+	margin-left: 75px;
+	margin-right:25px;
+	margin-top:3px;
+	padding: 1px;
+	border:1px solid black;
+	border-radius: 4px;
+}
+#topnav {
+	overflow: hidden;
+	padding-left: 10px;
+	padding-right: 5px;
+	background-color: #7895b4;
+}
+#topnav a {
+	float:left;
+	display: block;
+	color: #fefbf0;
+	text-align: center;
+	padding: 14px 16px;
+	text-decoration: none;
+	font-size: 1em;
+}
+#topnav a:hover {
+	background-color:#fdfdfb;
+	color: #052241;
+}
+#topnav a.active {
+	background-color: #fdfdfb;
+	color: #052241;
+}
+#topnav input[type=text] {
+	float: right;
+	padding: 6px;
+	border: none;
+	margin-top: 8px;
+	margin-right: 16px;
+	font-size: 17px;
+}
+@media screen and (max-width: 600px) {
+	#topnav a, #topnav input[type=text] {
+		float: none;
+		display: block;
+		text-align: left;
+		width:100%;
+		margin:0;
+		padding:14px;
+	}
+	#topnav input[type=text] {
+		border: 1px solid #ccc;
+	}
+}
+#topnav, #bottomnav,#main-container { /*sets size and centers content*/
+	margin: 0 auto;
+	width: 960px;
+}
+/*Main body content styling*/
+#main-container {
+	overflow: auto;
+	height: 100%;
+}
+.feature {
+	border: 1px dashed black;
+	width:940px;
+	height:300px;
+	margin:10px;
+}
+.contentbox {
+	width: 700px;
+	height: 450px;
+	margin: 10px;
+	float: left;
+}
+.contentbox p {
+	padding-bottom: 20px;
+	border-bottom:1px solid black;
+}
+.Right-sidebar {
+	width:220px;
+	margin:10px;
+	float:right;
+}
