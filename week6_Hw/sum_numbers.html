@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">	
+    <title>Sum of Numbers</title>
+    <script>
+	    "use strict";
+		var again; // comment line in JS where it shows in here you have declared a variable// 
+		do {
+			do {
+				var userInput = prompt("Enter any userinput number to sum\nfrom 1 through 100", "5");
+				userInput = parseInt(userInput);
+				if (isNaN(userInput) || userInput < 1 || userInput > 100) {
+					alert("Please enter a number between 1 and 100");
+				}
+			}
+			while (isNaN(userInput) || userInput < 1 || userInput > 100);
+			
+			var sum = 0;
+			for (var counter = 1; counter <= userInput; counter++) {
+				sum = sum + counter;
+			}
+			alert("The sum of the numbers from 1 through " + userInput + " is " + sum);
+			again = prompt("Interested to do another sum of numbers?", "y");
+		}
+		while (again == "y");
+    </script>
+</head>
+<body>
+    <main>
+        <!-- Will show after JavaScript has run -->
+        <h1>Thanks for using the Sum of Numbers application interface!</h1>
+    </main>
+</body>
+</html>
