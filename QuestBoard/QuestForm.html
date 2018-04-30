@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html> <!-- "QuestForm-->
+	<head>
+		<title> Quest Form </title>
+		<link rel="stylesheet" href="css/questboard.css">
+	</head>
+	<body>
+		<div id="header">
+			<!-- corner image -->
+			<img src="images/logoblack.png" alt="logo">
+			<h1> QuestBoard </h1>
+		</div>
+		<div id="topnav"> <!-- Navigation panel -->
+			<a href="index.html"> Home </a>
+			<a class="active" href="#QuestBoard/QuestLog.html"> Quest Board </a>
+			<a href=""> Merch </a>
+			<a href="about.html"> About </a>
+			<!-- <input type="text" placeholder="Search..."> :Possibly add a search bar-->
+		</div>
+		<div id="main-container">
+			<!-- Rotating Banner/ Main image goes here -->
+			<div class="feature">
+			<img src="images/Dragon_MH.jpg" alt="Scenic Picture courtesy of Monster Hunter World">
+			</div>
+		
+			<div class="contentbox">
+			<!-- Changing content box with main/hilighted articles -->
+			
+			<!--<img src="" alt=""> -->
+			<h2> Create A Quest </h2> 
+			
+			<form id="questform" action="">
+			
+			<fieldset>
+				<legend> Quest Details </legend>
+				<label> Quest Title: 
+				<input type="text" name="title" maxlength="25" /></label>
+					<br/><br/>
+				
+				<label> Difficulty Level:
+					<select name="difficulty" >
+						<option value="1">Easy - &#9733 </option>
+						<option value="2">Normal - &#9733&#9733 </option>
+						<option value="3">Hard - &#9733&#9733&#9733 </option>
+						<option value="4">Very Hard - &#9733&#9733&#9733&#9733 </option>
+						<option value="5">Challenge - &#9733&#9733&#9733&#9733&#9733 </option>
+					</select>	
+					<br/><br/>	
+				
+				<label> Game: 
+					<input type="text" name="gameName" maxlength="15" /></label>
+					<br/><br/>
+				
+				<label> Completion Conditions:<br/>
+					<textarea name="winConditions" cols="30" rows="3">Enter completion conditions here... </textarea></label>
+					<br/><br/>
+				
+				<label> Failure Conditions:<br/>
+					<textarea name="winConditions" cols="30" rows="3">Enter failure conditions here... </textarea></label>
+					<br/><br/>
+				
+				<label> Reward Amount: 
+					<input type="text" name="reward" maxlength="8" value="$"/></label>
+					<br/><br/>
+				
+				<h4> Choose a Charity to donate to upon quest failure: </h4>
+				<select name="charity">
+					<option value="blank">-Pick from this list-</option>
+					<option value="UnitedWay">United Way Worldwide</option>
+					<option value="Habitat">Habitat for Humanity International</option>
+					<option value="YMCA"> YMCA of the USA</option>
+					<option value="StJude">St. Jude Children's Research Hospital</option>
+					<option value="FeedAm">Feeding America</option>
+					<option value="Other">Other</option>
+				</select><br/>
+				
+				<h4> Or enter one that is not listed: </h4>
+				<label> Other:
+					<input type="text" name="otherCharity" maxlength="20" /></label>
+			</fieldset>
+			
+			<br/>
+			
+			<fieldset>
+				<legend> Personal Information </legend>
+				<label> Username: 
+					<input type="text" name="username" maxlength="15" placeholder="Enter Nickname" /> </label>
+					<br/><br/>
+				
+				<label> Email:
+					<input type="text" name="email" /></label>
+					<br/><br/>
+				
+				<label> Enter donation confirmation number here: <br/>
+					<input type="text" name="confirmation" />
+					<br/></br>
+			</fieldset>
+			<br/>
+			<div id="formSubmit">
+					<input type="image" src="images/button_submit-quest.png" width= height=/>
+				</div>	
+			
+			</form>
+	
+			</div>
+			
+			<!-- Right Sidebar: Shows rules and guidelines for creating quest -->
+			<div class="Right-sidebar">
+			<h3> Rules </h3>
+			<ol>
+				<li><strong>NO</strong> Profanity/Racial Slurs/Inapporpriate Remarks/etc.</li><br/>
+				<li>Difficulty of quest should be <strong>PROPORTIONAL</strong> to reward amount.</li><br/>
+			</ol>
+			</div>
+		</div>
+		
+		<!-- Lower navigation bar -->
+		
+		<div id="bottomnav">
+			<a href=""> Home </a> |
+			<a href=""> Quest Board </a> |
+			<a href=""> Merch </a> |
+			<a href=""> About </a> 
+		</div>
+		
+	</body>
+<html>

@@ -1,9 +1,3 @@
-/* Base CSS Template for Questboard website:
-Any alterations for specific pages are named as such 
-"questboard_('page').html" 
-
-Created by James Kevin D Aleman */
-
 body {
 	margin: 0 auto;
 	padding: 0;
@@ -13,7 +7,9 @@ body {
 h1, h2, h3, h4 {
 	text-transform: uppercase;
 }
-
+hr {
+	color:black;
+}
 /* top of page navigation and logo */
 
 #header {
@@ -108,22 +104,14 @@ h1, h2, h3, h4 {
 	margin:10px;
 }
 .contentbox {
-	width: 700px;
+	width: auto;
 	height: 1000px;
 	margin: 10px;
 	float: left;
 	overflow: hidden;
-	
 }
-.contentbox .icon {
-	float: left;
-	width:100px;
-	height:100px;
-	padding-right: 25px;
-	padding-left: 25px;
-}
-.contentbox p {
-	padding-bottom: 40px;
+.contentbox p, .contentbox ol {
+	padding-bottom: 20px;
 	border-bottom:1px solid black;
 }
 .Right-sidebar {
