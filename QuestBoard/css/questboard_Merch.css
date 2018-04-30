@@ -108,7 +108,9 @@ hr {
 	margin:10px;
 }
 #commingSoon {
-	height: 825px;
+	height: 820px;
+	padding-left: 20px;
+	padding-right:20px;
 }
 #commingSoon img{
 	display:block;

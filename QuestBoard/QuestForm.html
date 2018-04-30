@@ -3,7 +3,9 @@
 	<head>
 		<title> Quest Form </title>
 		<link rel="stylesheet" href="css/questboard_QuestForm.css">
+		<script src="JS/QuestForm.js"></script>
 	</head>
+	
 	<body>
 		<div id="header">
 			<!-- corner image -->
@@ -29,78 +31,81 @@
 			<!--<img src="" alt=""> -->
 			<h2> Create A Quest </h2> 
 			
-			<form id="questform" action="form.php">
+			<form name="questform" action="form.php">
 			
 			<fieldset>
 				<legend> Quest Details </legend>
 				
 				<img src="images/MH_X.jpg" alt="Monster Hunter X" />
-				<label> Quest Title: 
-				<input type="text" name="title" maxlength="25" /></label>
-					<br/><br/>
+				
+				<label> Quest Title: <br/>
+				<input type="text" name="title" maxlength="25" onfocusout="validateTitle()"/></label>
+					<br/>
 				
 				<label for="difficulty"> Difficulty Level: </label>
-					<select name="difficulty" >
+					<select id="difficulty" onfocusout="validateDifficulty()" > <br/>
+						<option value="0">Choose Difficulty </option>
 						<option value="1">Easy - &#9733; </option>
 						<option value="2">Normal - &#9733;&#9733; </option>
 						<option value="3">Hard - &#9733;&#9733;&#9733; </option>
 						<option value="4">Very Hard - &#9733;&#9733;&#9733;&#9733; </option>
 						<option value="5">Challenge - &#9733;&#9733;&#9733;&#9733;&#9733; </option>
 					</select>	
-					<br/><br/>	
+					<br/>	
 				
-				<label> Game: 
-					<input type="text" name="gameName" maxlength="15" /></label>
-					<br/><br/>
+				<label> Game: <br/>
+					<input type="text" name="gameName" maxlength="15" onfocusout="validateGame()"/></label>
+					<br/>
 				
-				<label> Completion Conditions:<br/>
-					<textarea name="winConditions" cols="30" rows="3">Enter completion conditions here... </textarea></label>
-					<br/><br/>
+				<label> Victory Conditions: <br/>
+					<textarea name="winConditions" cols="30" rows="3" onfocusout="validateWinConditions()"></textarea></label>
+					<br/>
 				
-				<label> Failure Conditions:<br/>
-					<textarea name="winConditions" cols="30" rows="3">Enter failure conditions here... </textarea></label>
-					<br/><br/>
+				<label> Failure Conditions: <br/>
+					<textarea name="winConditions" cols="30" rows="3"></textarea></label>
+					<br/>
 				
-				<label> Reward Amount: 
-					<input type="text" name="reward" maxlength="8" value="$"/></label>
-					<br/><br/>
+				<label> Reward Amount: <br/> 
+					<input type="text" name="reward" maxlength="8" value="$" onfocusout="validateReward()"/></label>
+					<br/>
 				
-				<h4> Choose a Charity to donate to upon quest failure: </h4>
-				<select name="charity">
-					<option value="blank">-Pick from this list-</option>
+				<h4> Choose a Charity to donate to <br/> upon quest failure: </h4>
+				<select id="charity" name="Charity">
+					<option value="blank">Pick From this List</option>
 					<option value="UnitedWay">United Way Worldwide</option>
 					<option value="Habitat">Habitat for Humanity International</option>
 					<option value="YMCA"> YMCA of the USA</option>
 					<option value="StJude">St. Jude Children's Research Hospital</option>
 					<option value="FeedAm">Feeding America</option>
-					<option value="Other">Other</option>
+					<option value="Other">Other: Enter Charity Below</option>
 				</select><br/>
 				
 				<h4> Or enter one that is not listed: </h4>
-				<label> Other:
-					<input type="text" name="otherCharity" maxlength="20" /></label>
+				<label> Other: <br/>
+					<input type="text" id="otherCharity" name="Charity2" maxlength="20" onfocusout="validateCharity()"/></label>
 			</fieldset>
 			
 			<br/>
 			
 			<fieldset>
 				<legend> Personal Information </legend>
-				<label> Username: 
+				<label> Username: <br/>
 					<input type="text" name="username" maxlength="15" placeholder="Enter Nickname" /> </label>
-					<br/><br/>
+					<br/>
 				
-				<label> Email:
-					<input type="text" name="email" /></label>
-					<br/><br/>
+				<label> Email: <br/>
+					<input type="text" name="email" onfocusout="validateEmail()"/></label>
+					<br/>
 				
 				<label> Enter donation confirmation number here: <br/>
-					<input type="text" name="confirmation" /></label>
-					<br/><br/>
+					<input type="text" name="confirmation" onfocusout="validateConfirmation()"/></label>
+					<br/>
 			</fieldset>
 			<br/>
+			
 			<div id="formSubmit">
-					<input type="image" src="images/button_submit-quest.png" alt="Form Submission Button"/>
-				</div>	
+				<input type="image" src="images/button_submit-quest.png" name="submit" alt="Submit"/>
+			</div>	
 			
 			</form>
 	

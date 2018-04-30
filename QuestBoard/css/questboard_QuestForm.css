@@ -115,7 +115,7 @@ fieldset img {
 }
 .contentbox {
 	width: 700px;
-	height: 1000px;
+	height: 1100px;
 	margin: 10px;
 	float: left;
 	overflow: hidden;
@@ -139,3 +139,19 @@ fieldset img {
 .Right-sidebar li {
 	padding-bottom: 15px;
 }
+
+/* Form CSS */
+
+#questform h4 {
+	margin-top: 5px;
+	margin-bottom: 10px;
+}
+input[type=text], textarea, select {
+	width:300px;
+	padding: 5px;
+	margin-bottom: 10px;
+	border: 1px solid black;
+	border-radius: 4px;
+}
+textarea {
+	resize: none;
