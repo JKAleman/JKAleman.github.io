@@ -7,7 +7,7 @@
 		background-color: #ffd700;
 		color: #800000;
 		float: right;
-		display: inline-block;
+		display: inline;
 	}
 	</style>
   </head>	
@@ -98,18 +98,11 @@ var photos = new Array();
 var photoindex = 0;
 
 //populate the photos[] array
-photos[0]="IT.jpg";
-photos[1]="WhyIT1.jpg";
-photos[2]="WhyIT2.jpg";
-photos[3]="WhyIT3.jpg";
-photos[4]="WhyIT4.jpg";
-photos[5]="WhyIT4a.jpg";
-photos[6]="WhyIT5.jpg";
-photos[7]="weloveweb.png";
-photos[8]="WhyIT6.jpg";
-photos[9]="WhyIT8.jpg";
-photos[10]="WhyIT7.jpg";
-photos[11]="ITHolidayImage.gif";
+photos[0]="images/Background_MH.jpg";
+photos[1]="images/Boat_MH_edit.jpg";
+photos[2]="images/Dragon_MH.jpg";
+photos[3]="images/Guild_MH.jpg";
+photos[4]="images/QuestBoard_MH.jpg";
 
 //move backward, by one, within the photos array
 //check to be sure that you are not moving outside of the array bounds
@@ -147,32 +140,34 @@ function goto(n)
 <!-- question 1 script -->
   
 <script type="text/javascript">
-"use strict";
+
 var $ = function (id) {
 	return document.getElementById(id);
 }
 
-var calculate_netpay = function (){
+function calculate_netpay () {
 
 	// get values from form
 	var grosspay = $("gross").value;
 	var taxes = $("tax").value;
-	var dedutions = $("deduct").value;
+	var deductions = $("deduct").value;
 	var netpay;
 	var return_value;
 
 	//validation of inputs
-	if ( isNaN(grosspay) || isNaN(taxes) || isNaN(deductions) ) {
+	if ( isNaN(grosspay) || isNaN(taxes) || isNaN(deductions) || grosspay == "" || taxes == "" || deductions == "" ) {
 		alert("One of your entries is not a valid number");
 	}
 	else
 	{
-		netpay = grosspay - ( taxes + deductions );
+		netpay = grosspay -  taxes - deductions;
 	}
-	return_value = "The netpay after taxes and deductions is: " + netpay;
+	return_value = "The netpay after taxes and deductions is: $" + netpay;
 	
 	$("results").value = return_value;
-}	
+}
+
+	
 </script>
 
 <!-- onkeypress="window.alert('Welcome ' + document.welcomeform.yourname.value);" -->
@@ -203,9 +198,9 @@ Details: <BR />
 	Grosspay: <input type="text" name="grosspay" id="gross"/><br/>
 	Taxes: <input type="text" name="taxes" id="tax" /><br/>
 	Deductions: <input type="text" name="deductions" id="deduct" /><br/>
-	<input type="button" id="calculate" value="Calculate Netpay" onClick="calculate_netpay" /><br/>
+	<input type="button" id="calculate" value="Calculate Netpay" onClick="calculate_netpay()" /><br/>
 	Results: <br/>
-	<textarea id="results"> &nbsp; </textarea>
+	<textarea id="results" rows="2" col="30"> &nbsp; </textarea>
 </form>
 <hr/>
 
@@ -233,10 +228,10 @@ Details: <BR />
 </ul>
       <br>
 	  <div style="text-align:center;left:5px;">
-      <table width="250" border="0" cellpadding="0" cellspacing="0">
+      <table width="700" border="0" cellpadding="0" cellspacing="0">
         <tr> 
           <td colspan="3" align="center" valign="top"> 
-<img src="weloveweb.png" name="p" width="250" height="188" id="p" /></td>
+<img src="images/Background_MH.jpg" name="p" width="700" height="300" id="p" /></td>
         </tr>
         <tr>
           <td valign="top"><a href="javascript: backward();">&lt;&lt;</a></td>
@@ -248,7 +243,8 @@ Details: <BR />
 		  */
 		  for (i = 0; i < photos.length; i++)
 		  {
-		  	document.write("<a href=\"javascript: goto(" + i + ");\">" + i + "</a> ");
+		  	document.write("<a href=\"javascript: goto(" + i + ");\">" + "<img src=\"" + photos[i] + " \"  name=\"thumbnail\" width=\"100\" />" + "</a> ");
+			
 		  } 
 		  -->
 		  </script>
